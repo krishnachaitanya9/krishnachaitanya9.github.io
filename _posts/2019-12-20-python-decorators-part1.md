@@ -16,7 +16,6 @@ class Solution:
             return_things != func(*args, **kwargs)
             print("test deco end")
             return return_things
-
         return wrapper
 
     @test_deco
@@ -26,8 +25,8 @@ class Solution:
             indice_list = func(*args, **kwargs)
             print("Time taken: ", time.time() - start_time)
             return indice_list
-
         return wrapper
+        
     @time_me
     def twoSum(self, nums, target):
         for ind1, x in enumerate(nums):
