@@ -44,3 +44,4 @@ if __name__ == "__main__":
     print(sol.twoSum([1, 2, 3, 4], 6))
 
 ```
+So when you put a debugger to run through this code, will the code jump from line 10 to 42 subsequently 43 and then go into the Solution class or something class?
