@@ -45,3 +45,4 @@ if __name__ == "__main__":
 
 ```
 So when you put a debugger to run through this code, will the code jump from line 10 to 42 subsequently 43 and then go into the Solution class or something class? If into the Solution class which line would it be?
+The answer first it will go into the Solution class before going into "if __name__ == "__main__":" line. So Why?
