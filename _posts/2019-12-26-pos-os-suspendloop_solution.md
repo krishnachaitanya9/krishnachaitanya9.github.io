@@ -39,4 +39,6 @@ Only difference is you need to add
 ```bash
 button.lid_init_state=open
 ```
+after splash.
+
 And Voila! Suspend Loop problem solved!
