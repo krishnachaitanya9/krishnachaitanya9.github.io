@@ -4,21 +4,12 @@ date: 2019-12-20 00:26:00 +0800
 categories: [Python3, OOPs]
 tags: [Python3]
 ---
-Python Decorators are useful. They help encapsulate the code and it's a good OOP's concept. But you have to use it carefully. For example let's start with simple python. 
+Python Decorators are useful. They help encapsulate the code and it's a good OOP's concept.
 
 ```python
 import time
 
 class Solution:
-    def test_deco(func):
-        def wrapper(*args, **kwargs):
-            print("test deco start")
-            return_things != func(*args, **kwargs)
-            print("test deco end")
-            return return_things
-        return wrapper
-
-    @test_deco
     def time_me(func):
         def wrapper(*args, **kwargs):
             start_time = time.time()
@@ -26,7 +17,7 @@ class Solution:
             print("Time taken: ", time.time() - start_time)
             return indice_list
         return wrapper
-        
+
     @time_me
     def twoSum(self, nums, target):
         for ind1, x in enumerate(nums):
@@ -44,5 +35,12 @@ if __name__ == "__main__":
     print(sol.twoSum([1, 2, 3, 4], 6))
 
 ```
-So when you put a debugger to run through this code, will the code jump from line 10 to 42 subsequently 43 and then go into the Solution class or something class? If into the Solution class which line would it be?
-The answer first it will go into the Solution class before going into "if __name__ == "__main__":" line. So Why?
+For example you have to time your function. Would you write that in the same function? Wouldn't it be clumsy? Is it according to OOP's principles? Hell No.
+
+But now if you encapsulate the function with time_me function, you can time your function, without needing to write extra code in the main twoSum function itself. Isn't that cool?
+
+A very good reference for this post is: https://www.python-course.eu/python3_decorators.php
+
+Rest whatever I found don't explain the concept well!
+
+Lemme know your comments below.
