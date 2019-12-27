@@ -11,7 +11,7 @@ Pop! OS is the best Razer. Later I also installed Polychromatic app by Razer and
 
 
 But there was one problem. When I suspend my Blade and then turn it back on, it again used to suspend after
-20 seconds. You can call it the "Suspend Loop". It's similar to what happened to my android mobile when I experimented on a little too much. In terms on Android they call it "Boot Loop".
+20 seconds. You can call it the "Suspend Loop". It's similar to what happened to my android mobile when I experimented on it a little too much. In terms on Android they call it "Boot Loop".
 
 Unfortunately on Ubuntu website the solution I got was for Grub. Pop! OS migrated from Grub to systemd boot. They argue in their website that it cuts time in booting. Fair enough. After a lot of searching
 I found the solution. You have to edit the following file
