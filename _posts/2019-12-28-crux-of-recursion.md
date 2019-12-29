@@ -1,5 +1,5 @@
 ---
-title: "The vrux of Recursion"
+title: "The crux of Recursion"
 date: 2019-12-28 00:26:00 +0800
 categories: [Recursion]
 tags: [Recursion]
