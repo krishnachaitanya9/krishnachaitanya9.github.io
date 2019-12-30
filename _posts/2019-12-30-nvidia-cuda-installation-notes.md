@@ -9,7 +9,7 @@ My Pop! OS comes with stable NVIDIA Stable Driver configuration from Apt and it 
 
 So I have this stable proprietary driver from Ubuntu Graphics PPA. So when I install the cuda run file downloaded from the NVIDIA's website, I simply un-check the driver installation. If I keep it checked then I would have stop ligthdm, kdm blah blah, not good. Simply un-check the driver and you will live to see another day.
 
-Next problem is the gcc-version. For some reason only God knows, it doesn't support latest GCC version, and it cries like a little baby if you don't have old GCC version as your default. At the time of writing this article, I was installing cuda-10.2 I needed gcc-7. Fortunately multiple gcc version can co-exist together and don't fight like kadarshians. So install the right version and you are good to go. If you develop C++ applications often you specify the GCC version while building and I guess it should be fine. I use CLion and I didn't face a problem yet.
+Next problem is the gcc-version. For some reason only God knows, it doesn't support latest GCC version, and it cries like a little baby if you don't have old GCC version as your default. At the time of writing this article, I was installing cuda-10.2 I needed gcc-7. Fortunately multiple gcc version can co-exist together and don't fight like Kadarshians. So install the right version and you are good to go. If you develop C++ applications often you specify the GCC version while building and I guess it should be fine. I use CLion and I didn't face a problem yet.
 
 After cuda is installed, it will complain that installation is incomplete as you didn't install the driver. Thank NVIDIA for the warning and just ignore the message.
 
