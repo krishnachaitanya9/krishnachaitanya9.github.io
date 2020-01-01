@@ -6,14 +6,14 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Kodur Krishna Chaitanya's Blog
+title: Krishna Chaitanya's Blog
 
 description: 'My experiments with CS technologies in general. Mainly Python and C++'
 
 # Replace with your domain, e.g. 'https://username.github.io'
 url: 'krishnachaitanya9.github.io'
 
-author: Kodur Krishna Chaitanya                  # change to your full name
+author: Krishna Chaitanya                  # change to your full name
 
 avatar: /assets/img/sample/avatar.jpg   # Support network resources.
 
