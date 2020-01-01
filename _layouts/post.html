@@ -111,6 +111,8 @@ layout: default
     {% if site.disqus.comments and page.comments %}
       {% include disqus.html %}
     {% endif %}
+    <! –– Fb Comment Addition: from http://lkzhao.com/2016/10/25/facebook-comment-plugin-in-jekyll.html -->
+    <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}"></div>
 
     </div> <!-- .pl-1 pr-1 -->
 
