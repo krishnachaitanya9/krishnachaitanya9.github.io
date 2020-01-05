@@ -10,4 +10,5 @@ The Eigen Vector equation is:
 $$
 (A - \lambda I_n)\vec{x} = 0 \\ - eq 1
 $$
+
 Where $A$ is the matrix we want to find out the Eigen vectors for and $\vec{x}$ is the eigen vector of $A$. So how to interpret this physically or graphically? Let's discuss!
