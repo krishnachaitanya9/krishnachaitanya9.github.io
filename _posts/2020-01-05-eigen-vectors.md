@@ -6,5 +6,6 @@ tags: [Eigen]
 ---
 
 The Eigen Vector equation is:
-
+```
 $$(A - \lambda I_n)\vec{x} = 0$$
+```
