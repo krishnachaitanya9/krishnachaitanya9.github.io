@@ -8,5 +8,5 @@ tags: [Eigen]
 The Eigen Vector equation is:
 
 $$
-(A - \lambda I_n)\vec{x} = 0  \pushright{\text{(1)}}
+(A - \lambda I_n)\vec{x} = 0  \hfill \text{(1)}
 $$
