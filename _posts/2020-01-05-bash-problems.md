@@ -22,4 +22,12 @@ Now you scratch your heads and think what all the mistakes you committed in your
 ```bash
 if [ -z "$1" ] && [ -z "$2" ];
 ```
-Specifically a space after [, will allow you bash script to run properly. Good Day!
+Specifically a space after [, will allow you bash script to run properly.
+
+So how to find this anamolies? You gotta install linter. I use atom for all my bash scripts. I use the shellcheck linter in Ubuntu (Don't know don't care about Windows OS) which can be installed as below:
+
+```
+sudo snap install shellcheck
+```
+
+In atom you have to install this amazing plugin [linter-shellcheck](https://atom.io/packages/linter-shellcheck). This will show if you have any problems in the scripts. Good Day!
