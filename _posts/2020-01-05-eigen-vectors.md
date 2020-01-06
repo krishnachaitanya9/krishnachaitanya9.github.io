@@ -24,5 +24,4 @@ See this? The eigen vector doesn't care about the transform. It will make f(x) l
 
 So if you take Matrix A's eigen vector , plot in on graph the points representing the eigen vector just interpolate when the function f(x) is applied. That's what the eigen vector means graphically. For more illustration checkout this great video.
 
-
-[![Eigen Vectors 3Blue1Brown](https://www.youtube.com/watch?v=PFDu9oVAE-g&t=761s)
+[Eigen Vectors 3Blue1Brown](https://www.youtube.com/watch?v=PFDu9oVAE-g&t=761s)
