@@ -30,4 +30,4 @@ So how to find this anamolies? You gotta install linter. I use atom for all my b
 sudo snap install shellcheck
 ```
 
-Then in atom you have to install this amazing plugin [linter-shellcheck](https://atom.io/packages/linter-shellcheck). This will show if you have any problems in the scripts. Good Day!
+Then in atom you have to install this amazing plugin [linter-shellcheck](https://atom.io/packages/linter-shellcheck). This will show if you have any problems in the script and help you correct it. Good Day!
