@@ -26,7 +26,7 @@ Specifically a space after [, will allow you bash script to run properly.
 
 So how to find this anamolies? You gotta install linter. I use atom for all my bash scripts. I use the shellcheck linter in Ubuntu (Don't know don't care about Windows OS) which can be installed as below:
 
-```
+```bash
 sudo snap install shellcheck
 ```
 
