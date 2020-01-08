@@ -17,6 +17,8 @@ If you use the above code, do you know what you will get? The below error:
 -z command not found
 ```
 
+It doesn't say your syntax is wrong, but misleadingly says command not found. NOT COOL!!
+
 Now you scratch your heads and think what all the mistakes you committed in your past and present life as well in this code? Well remember bash is very certain about spaces. Convert the above code to
 
 ```bash
