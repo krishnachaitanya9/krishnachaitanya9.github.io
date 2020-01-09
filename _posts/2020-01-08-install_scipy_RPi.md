@@ -1,5 +1,5 @@
 ---
-title: "Eigen Vectors"
+title: "Install Package using Python Wheels"
 date: 2020-01-08 00:26:00 +0800
 categories: [RPi, Wheels]
 tags: [RPi, Wheels]
@@ -19,4 +19,4 @@ Despite many attempts, due to some unknown reasons sometimes pip can't find the 
 pip install package_wheel.whl
 ```
 
-This will save you enormous amounts of time. Also don't forget to go through piwheels website for their tutorials on how o do use it. It's pretty straightforward. Good Day!
+This will save you enormous amounts of time. Also don't forget to go through piwheels website for their tutorials on how o do use it. It's pretty straightforward. Also read this article in how piwheels is contributing to saving people's time and helping them concentrate on more pressing concerns. [How piwheels will save Raspberry Pi users time in 2020](https://opensource.com/article/20/1/piwheels). Good Day!

@@ -1,5 +1,5 @@
 ---
-title: "Eigen Vectors"
+title: "Take RPi image backup and also load it in your filesystem to check it's contents"
 date: 2020-01-08 00:26:00 +0800
 categories: [RPi]
 tags: [RPi]
