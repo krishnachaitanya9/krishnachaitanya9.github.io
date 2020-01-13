@@ -11,4 +11,9 @@ Theme: One Dark Theme (I guess it's inspired by Atom. Before I used to use subli
 Coding Font: Fira Code (Style: Retina) with ligatures enabled
 Font Size: 16  
 
+Also the terminal and it's theme is very important. Recently I started using zsh. It's very good and I like it. The main problem you will face is that after installing zsh, when you start using it gnome-terminal, many of the symbols which the theme alabaster uses won't render correctly. It will show something like this below:
+![ZSH Bad Preview](images/fav_jetbrains_theme/zsh_bad_preview.png)
+
+Well the problem in my case was that the Ligconsolata font in my terminal I was using, didn't had these symbols. Fortunately Fira Code (Exact same font as mentioned above) has already all these symbols so just change to that and you will be fine.
+
 Enjoy Coding Folks!
