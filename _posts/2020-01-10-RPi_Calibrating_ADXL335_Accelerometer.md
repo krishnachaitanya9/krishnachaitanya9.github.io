@@ -62,17 +62,20 @@ During taking the readings make sure you spirit level to find out it's exactly f
 
 So now, let's retrospect what's the difference between my method mentioned here, original equation by datasheet, and some other methods mentioned on internet by the good samaritans?
 
-###My Method:
+## My Method:
+
 Place acceleration in normal position and make sure it's perfectly horizontal by the help of spirit level. Take Voltage measurements and this voltage would be corresponding to 1G.
 
 Place the accelerometer upside down, and measure the voltage again. Now this measurement will be corresponding to -1G.
 
 As the output is ratiometric you can construct a line and use it to get appropriate G value from ADC value.
 
-###[Two Point Calibration](https://learn.adafruit.com/calibrating-sensors/two-point-calibration)
+## [Two Point Calibration](https://learn.adafruit.com/calibrating-sensors/two-point-calibration)
+
 Read it in Adafruit website
 
-###Major difference
+## Major difference
+
 In two point calibration, you have to slowly rotate to get the maximum and minimum values of G. We also know the theoretical maximum and minimum values. One disadvantage with this is that whenever you rotate by your hand, which probably everyone would do, they might put in some acceleration components when rotating the accelerometer. So you have to do this experiment many times, try to average the min max acceleration and then use map function in arduino to get real acceleration in G.
 
 Alternatively if you don't care about acceleration, you know maximum acceleration it should measure should be +/- 3G, if you rotate fast enough, and don't care, the readings can have some noise. So this method is also not so good, to get exact characteristics.
