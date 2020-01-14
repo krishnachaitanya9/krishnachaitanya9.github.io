@@ -29,19 +29,19 @@ Also when you just place the accelerometer on the table, in normal position, in 
 The answer lies in my above statement: The ADXL335 output is ratiometric. So we basically have two points (0V, -3G) and (3.3V, 3G). If we draw a co-ordinate system where Voltage is on X axis and Acceleration in G is on Y axis, we have two points, use line equation and draw a line. So the equation of the line would be:
 
 $$
-
+V = \frac{3.3(g + 3)}{6}
 $$
 
 Now coming back to MCP3208. We will be getting output only in digital. So the output of MCP3208 can range from [1, 4096]. Why 4096? Because it's $$2^12$$ and also because it's 12-bit ADC. Now after we get ADC value we need to convert back to voltage so that we can estimate how much acceleration in terms of G are we getting? To do that, we refer to the datasheet of [MCP3208](https://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf).Scroll down to Page 14 and you will find a equation below:
 
 $$
-
+\frac{4096xV}{V_ref} = Output_ADC
 $$
 
-So now it's very important, what we put in Vref. Now at last I have also attached the circuit diagram I am using for the project. You can see I have put Vref to 3.3V. Hence My final equation would be :
+Now this $$Output_ADC$$, let's just simply call it output. So now it's very important, what we put in Vref. Now at last I have also attached the circuit diagram I am using for the project. You can see I have put Vref to 3.3V. Hence My final equation would be :
 
 $$
-
+g = \frac{outputx6}{4096} - 3
 $$
 
 So just for 1G, according to equations, we would should be measuring the voltage of 2.2V in our multimeter/oscilloscope when you measure the voltage between pins Zout and ground.
