@@ -56,6 +56,8 @@ $$
 g = \frac{output\times10.23}{4096} - 5.2
 $$
 
+So why does it have to measure 2V instead of 2.2V? The answer lies in sensitivity. In the datasheet and also according to adafruit's forum, the sensitivity needs to in some range. And that range is 270 to 330 mV/g in Page 3 of the datasheet. So from the theoretical values if we calculate the sensitivity $$\frac{0-3.3}{-3 - (3)}$$ which is 550mV/g. But according to measured values using similar slope formula you would get 322.5mV/g. So what can we infer from these? That theoretical values are just theoretical and shit? Because the min-max sensitivity values according to datasheet aren't even in range. Maybe yeah. Everything ain't theoretical. Theoretical values are only to give you some direction.
+
 So now you use this equation on all axes (Honestly you have to do it for every axis, but I just did for one axis and called it a day) and then find out exact acceleration in g. And this time it will be smooth and calibrated and it will behave exactly how you want it to be.
 
 During taking the readings make sure you spirit level to find out it's exactly flat or not, else you find yourself in trouble later, when it's not behaving the way you wanted.
