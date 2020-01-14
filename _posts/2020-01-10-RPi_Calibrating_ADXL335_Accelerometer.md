@@ -35,7 +35,7 @@ $$
 Now coming back to MCP3208. We will be getting output only in digital. So the output of MCP3208 can range from [1, 4096]. Why 4096? Because it's $$2^12$$ and also because it's 12-bit ADC. Now after we get ADC value we need to convert back to voltage so that we can estimate how much acceleration in terms of G are we getting? To do that, we refer to the datasheet of [MCP3208](https://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf).Scroll down to Page 14 and you will find a equation below:
 
 $$
-\frac{4096\timesV}{V_ref} = Output_{ADC}
+\frac{4096 \times V}{V_ref} = Output_{ADC}
 $$
 
 Now this $$Output_ADC$$, let's just simply call it output. So now it's very important, what we put in Vref. Now at last I have also attached the circuit diagram I am using for the project. You can see I have put Vref to 3.3V. Hence My final equation would be :
