@@ -100,6 +100,9 @@ if __name__ == "__main__":
 The output is something like this:
 ![Theoretical Vs Real](/assets/img/accel_calibration/real_vs_calculated.png)
 
+The circuit diagram is shown below:
+![Circuit Diagram](![Theoretical Vs Real](/assets/img/accel_calibration/circuit_diagram.png)
+
 You can see that the theoretical line and measured values line, nearly do have less angle. So we can assume that "My Method" is accurate enough and is also easy to do.
 
 Good Day!
