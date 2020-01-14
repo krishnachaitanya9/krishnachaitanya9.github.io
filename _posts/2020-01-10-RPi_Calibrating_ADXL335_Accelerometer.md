@@ -38,7 +38,7 @@ $$
 \frac{4096 \times V}{V_ref} = Output_{ADC}
 $$
 
-Now this $$Output_ADC$$, let's just simply call it output. So now it's very important, what we put in Vref. Now at last I have also attached the circuit diagram I am using for the project. You can see I have put Vref to 3.3V. Hence My final equation would be :
+Now this $$Output_{ADC}$$, let's just simply call it output. So now it's very important, what we put in Vref. Now at last I have also attached the circuit diagram I am using for the project. You can see I have put Vref to 3.3V. Hence My final equation would be :
 
 $$
 g = \frac{output\times6}{4096} - 3
