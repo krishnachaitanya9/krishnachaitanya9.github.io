@@ -5,16 +5,16 @@ categories: [Accelerometer, Calibration]
 tags: [Accelerometer, Calibration]  
 ---
 
-I had to calibrate the accelerometer ADXL335 for the robot skin project that I am doing. It gives analog output in this digital world. Good for it! No problem. So I attached MPC3208 12bit ADC converter to read that output and consequently converting them to G's. Basically G means gravitational force of the mother earth which is 9.819 m/$s^2$.
+I had to calibrate the accelerometer ADXL335 for the robot skin project that I am doing. It gives analog output in this digital world. Good for it! No problem. So I attached MPC3208 12bit ADC converter to read that output and consequently converting them to G's. Basically G means gravitational force of the mother earth which is 9.819 m/$$s^2$$
 
 Why I have chosen MP3208? Because it has python package. Install plug and play. Easy and simple. And choosing ADXL335 wasn't totally under my control, so here we are reading this blog post. Let's cross this Styx river together shall we?
 
 The ADXL335 outputs in the range of 0V to 3.3V. Below is a quick table:
 
-| Voltage | G Value |   
+| Voltage | G Value |
 |---------|---------|
-| 0       | -3G     |   
-| 3.3     | 3G      |  
+| 0       | -3G     |
+| 3.3     | 3G      |
 
 [Source](https://www.adafruit.com/product/163)
 
@@ -32,10 +32,10 @@ $$
 V = \frac{3.3(g + 3)}{6}
 $$
 
-Now coming back to MCP3208. We will be getting output only in digital. So the output of MCP3208 can range from [1, 4096]. Why 4096? Because it's $$2^12$$ and also because it's 12-bit ADC. Now after we get ADC value we need to convert back to voltage so that we can estimate how much acceleration in terms of G are we getting? To do that, we refer to the datasheet of [MCP3208](https://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf).Scroll down to Page 14 and you will find a equation below:
+Now coming back to MCP3208. We will be getting output only in digital. So the output of MCP3208 can range from [1, 4096]. Why 4096? Because it's $$2^{12}$$ and also because it's 12-bit ADC. Now after we get ADC value we need to convert back to voltage so that we can estimate how much acceleration in terms of G are we getting? To do that, we refer to the datasheet of [MCP3208](https://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf).Scroll down to Page 14 and you will find a equation below:
 
 $$
-\frac{4096 \times V}{V_ref} = Output_{ADC}
+\frac{4096 \times V}{V_{ref}} = Output_{ADC}
 $$
 
 Now this $$Output_{ADC}$$, let's just simply call it output. So now it's very important, what we put in Vref. Now at last I have also attached the circuit diagram I am using for the project. You can see I have put Vref to 3.3V. Hence My final equation would be :
@@ -46,7 +46,7 @@ $$
 
 So just for 1G, according to equations, we would should be measuring the voltage of 2.2V in our multimeter/oscilloscope when you measure the voltage between pins Zout and ground according to the above equation.
 
-But if all this world was made of roses and Taylor Swift songs, you wouldn't be measuring that.
+But unless all this world was made of roses and Taylor Swift songs, you wouldn't be measuring that.
 
 I was measuring exactly 2V between Zout and ground. Then I thought about the all the mistakes I made in my life till now. Well couldn't find any. To my dismay I also found it was same in case of X and Y axes too. So if your sensor is giving something like this, what would you do?
 

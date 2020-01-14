@@ -1,4 +1,9 @@
 #!/bin/bash
 git add .
-git commit -m "$1"
+if [ -z "$1" ]
+then
+  git commit -m "Blog Content"
+else
+  git commit -m "$1"
+fi
 git push -u origin master
