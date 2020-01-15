@@ -1,6 +1,6 @@
 ---
 title: "ROS No brainer Intro"
-date: 2020-01-05 00:26:00 +0800
+date: 2020-01-15 00:26:00 +0800
 categories: [ROS]
 tags: [ROS]
 ---
