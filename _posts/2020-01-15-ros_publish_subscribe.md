@@ -5,7 +5,7 @@ categories: [ROS]
 tags: [ROS]
 ---
 
-Recently I had to work with ROS. God knows why, but had to. So here I am. This is a no-brainer introduction. One of the very good reference is a youtube [link](https://www.youtube.com/watch?v=DLVyc9hOvk8). First things first, you need to run ROS Core by the following command:
+Recently I had to work with ROS. This is a no-brainer introduction. One of the very good reference is a youtube [link](https://www.youtube.com/watch?v=DLVyc9hOvk8). First things first, you need to run ROS Core by the following command:
 
 ```bash
 roscore
