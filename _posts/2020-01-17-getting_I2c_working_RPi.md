@@ -5,7 +5,7 @@ categories: [RPi, I2C]
 tags: [RPi, I2C]
 ---
 
-So for the labwork we are using Ubuntu Mate, so that we can use ROS. Ubuntu Mate has an advantage for getting ROS installed easily compared to Raspbian OS preferred by Raspberry Pi community. But havin;g Ubuntu mate comes with it's own problems. I2C activation isn't easy. So Let's work on it.
+So for the labwork we are using Ubuntu Mate, so that we can use ROS. Ubuntu Mate has an advantage for getting ROS installed easily compared to Raspbian OS preferred by Raspberry Pi community. But having Ubuntu mate comes with it's own problems. I2C activation isn't easy. So Let's work on it.
 
 So this worked for me:
 
