@@ -32,4 +32,14 @@ So how to find this anamolies? You gotta install linter. I use atom for all my b
 sudo snap install shellcheck
 ```
 
-Then in atom you have to install this amazing plugin [linter-shellcheck](https://atom.io/packages/linter-shellcheck). This will show if you have any problems in the script and help you correct it. Good Day!
+Then in atom you have to install this amazing plugin [linter-shellcheck](https://atom.io/packages/linter-shellcheck). This will show if you have any problems in the script and help you correct it. 
+
+Recently I have found that zsh is a GREAT for people who use branches and git like me. I installed agnoster theme and it's beautiful. But zsh doesn't have shell linters by default, I hope they make one. The default bash shell linter doesn't work for zsh, and it throws an error. To make the shellcheck interpret our zsh script as a bash script, you need to add the following line after shebang line:
+
+```bash
+# shellcheck shell=bash
+```
+
+Like this, you can atleast lint your code and not pull your hair. Source: https://scriptingosx.com/2019/08/shellcheck-and-zsh/
+
+Good Day!
