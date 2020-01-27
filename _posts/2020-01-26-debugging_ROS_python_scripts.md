@@ -1,5 +1,5 @@
 ---
-title: "Introduction to catkin Workspace and ROS modules"
+title: "Debugging ROS in python"
 date: 2020-01-26 00:26:00 +0800
 categories: [ROS, Catkin]
 tags: [ROS, Catkin]
@@ -44,11 +44,32 @@ My final VS Code settings file looks something like this:
 
 ```json
 {
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "name": "Comment",
+            "scope": [
+              "comment",
+              "comment.block",
+              "comment.block.documentation",
+              "comment.line",
+              "comment.line.double-slash",
+              "punctuation.definition.comment",
+            ],
+            "settings": {
+              "fontStyle": "italic",
+              // "fontStyle": "italic underline",
+              // "fontStyle": "italic bold underline",
+            }
+          },
+        ]
+     },
     "editor.fontFamily": "'Fira Code Retina'",
     "editor.fontLigatures": true,
     "editor.fontSize": 17,
-    "workbench.colorTheme": "Noctis Sereno",
-    "python.linting.pylintEnabled": true
+    "workbench.colorTheme": "Andromeda Italic",
+    "python.linting.pylintEnabled": true,
+    "terminal.integrated.inheritEnv": false
 }
 ```
 
