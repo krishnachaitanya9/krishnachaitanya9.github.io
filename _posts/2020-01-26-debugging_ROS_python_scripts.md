@@ -57,9 +57,7 @@ My final VS Code settings file looks something like this:
               "punctuation.definition.comment",
             ],
             "settings": {
-              "fontStyle": "italic",
-              // "fontStyle": "italic underline",
-              // "fontStyle": "italic bold underline",
+              "fontStyle": "italic"
             }
           },
         ]
