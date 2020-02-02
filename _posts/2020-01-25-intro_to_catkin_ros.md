@@ -101,7 +101,7 @@ make
 
 
 
-Now cd into robot_skin_gazebo main directory and run catkin_make again
+Now cd into robot_skin_gazebo main directory and run catkin_make again. You need to put the libfranka build path, not the build path i have shown here. This is just an example.
 
 ```bash
 catkin_make -j4 -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/PycharmProjects/robot_skin_gazebo/src/libfranka/build
