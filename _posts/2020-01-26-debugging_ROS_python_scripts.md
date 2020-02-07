@@ -38,8 +38,6 @@ For debugging the python code, you really can't use rosrun and use VSCode to deb
 
 To quote the Mandalorian Series - "That's the way"
 
- This feature ain't available in PyCharm because it changes a lot of environment variables when running the python code. This is the only one downside of PyCharm else it's a greatest piece of software I have ever known. 
-
 My final VS Code settings file looks something like this:
 
 ```json
@@ -72,3 +70,7 @@ My final VS Code settings file looks something like this:
 ```
 
 I will keep editing this to keep it updated here.
+
+
+
+Also you use your PyCharm to do debugging. PyCharm's debugger is one of the best. If you open PyCharm normally (From the desktop icon that it creates) you wouldn't be able to debug because catkin environment isn't activated. But if you first open terminal, activate catkin environment and then run pycharm.sh manually then you can easily debug your code with PyCharm.
