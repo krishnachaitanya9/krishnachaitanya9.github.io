@@ -1,6 +1,6 @@
 ---
 title: "Trajectory Msg in Python"
-date: 2020-01-26 00:26:00 +0800
+date: 2020-02-10 00:26:00 +0800
 categories: [Git]
 tags: [Git]
 ---
