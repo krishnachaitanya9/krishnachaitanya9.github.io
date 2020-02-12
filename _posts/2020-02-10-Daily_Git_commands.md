@@ -1,5 +1,5 @@
 ---
-title: "Trajectory Msg in Python"
+title: "Git daily commands"
 date: 2020-02-10 00:26:00 +0800
 categories: [Git]
 tags: [Git]
