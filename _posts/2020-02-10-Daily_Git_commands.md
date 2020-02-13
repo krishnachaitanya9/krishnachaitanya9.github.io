@@ -19,7 +19,7 @@ So to delete a local branch you do:
 git branch -D branch_name
 ```
 
-This will delete the branch from your local repository, without asking more questions. Straight up delete lol. Best way to take revenge. Go to other's PC, delete branch. LEAVE. I am kidding, don't do that, it's diabolical. Or is it?
+This will delete the branch from your local repository, without asking more questions. 
 
 Delete local branches which aren't there in remote. Remote meaning on github website when you go to branches, you don't see some which are there in your local PC. One reason could be that somebody might have forgot to push to remote, or somebody deleted that branch from remote. Either case if you want it gone from your PC too run the below command:
 
@@ -27,13 +27,13 @@ Delete local branches which aren't there in remote. Remote meaning on github web
 git remote prune origin
 ```
 
-Now your lazy co-workers pushed on Sunday and you have to merge those into your branch named "not_master" which is not a master. Assume your co-worker is on "IAmLazy" branch. How do you integrate his branch changes into your and start working on it? One way could be you could send a letter to your boss saying "Sunday is important to me you POS" or you can suck up and merge the branch like this:
+Now your co-workers pushed on Sunday and you have to merge those into your branch named "not_master" which is not a master. Assume your co-worker is on "coworker" branch. How do you integrate his branch changes into your and start working on it? One way could be to merge the branch like this:
 
 ```bash
-git rebase origin/IAmLazy
+git rebase origin/coworker
 ```
 
-And more better your co-worker pushed it to master to show his workmanship. How do you get all changes from master?
+And more better some changes have been merged to master through a PR. How do you get all changes from master?
 
 ```bash
 git rebase origin/master
@@ -45,6 +45,14 @@ If there are merge conflicts, resolve them locally and then execute
 
 ```bash
 git rebase --continue
+```
+
+Now you have a directory, you want it deleted in remote after you added in gitignore. What should you do? Basically without deleting the original directory and committing the changes you delete git's copy and then commit changes. That's how . See the commands below:
+
+```bash
+git rm -r --cached some-directory
+git commit -m 'Remove the now ignored directory "some-directory"'
+git push origin master
 ```
 
 That's all folks. Please enjoy your time!
