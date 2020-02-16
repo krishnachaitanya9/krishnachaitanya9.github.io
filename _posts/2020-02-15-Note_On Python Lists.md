@@ -1,6 +1,6 @@
 ---
 title: "Why you shouldn't use python list multiplied with an int"
-date: 2019-02-15 00:26:00 +0800
+date: 2020-02-15 00:26:00 +0800
 categories: [Python]
 tags: [Python]
 ---
