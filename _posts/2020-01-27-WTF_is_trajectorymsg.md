@@ -25,4 +25,4 @@ trajectory_msgs/JointTrajectoryPoint[] points
   duration time_from_start
 ```
 
-So we find that there is a header, and also another field called points. So how do we set these values from python?
+So we find that there is a header, and also another field called points. So how do we set these values from python? Below is the code:
