@@ -26,3 +26,20 @@ trajectory_msgs/JointTrajectoryPoint[] points
 ```
 
 So we find that there is a header, and also another field called points. So how do we set these values from python? Below is the code:
+
+```python
+from trajectory_msgs.msg import JointTrajectory
+from trajectory_msgs.msg import JointTrajectoryPoint
+trajectory_msg = JointTrajectory()
+trajectory_msg.header.stamp = rospy.Time.now()
+trajectory_msg.header.frame_id = '/base_link'
+
+trajectory_msg.joint_names = ['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6',
+                              'panda_joint7']
+
+point = JointTrajectoryPoint()
+point.positions = [0, 0, 0, 0, 0, 0, 0]
+
+```
+
+Similarly you can set point.velocities, point.accelerations and point.effort. Enjoy!
