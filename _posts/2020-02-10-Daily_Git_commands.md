@@ -5,6 +5,14 @@ categories: [Git]
 tags: [Git]
 ---
 
+To setup your email in git to be used globally:
+
+```bash
+git config --global user.email "chaitanyaradon89@gmail.com"
+```
+
+
+
 So recently I have been working a lot around Git. many people have been pushing pulling raising PR's and issues etc. Good stuff. So I thought to write a git tutorial for myself to keep all commands in handy.
 
 To checkout a branch you do:
