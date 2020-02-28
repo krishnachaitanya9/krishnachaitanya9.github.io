@@ -67,7 +67,7 @@ For easy SSH download authentications, below are the commands:
 git clone https://github.com/erdalpekel/panda_simulation.git
 git clone --branch simulation https://github.com/erdalpekel/franka_ros.git
 git clone https://github.com/ros-planning/panda_moveit_config.git
-git clone git@github.com:frankaemika/libfranka.git
+git clone --recursive https://github.com/frankaemika/libfranka
 git clone git@github.com:HIRO-group/ros_robotic_skin.git
 ```
 

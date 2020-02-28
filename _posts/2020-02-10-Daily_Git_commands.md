@@ -63,4 +63,16 @@ git commit -m 'Remove the now ignored directory "some-directory"'
 git push origin master
 ```
 
+How to add a submodule?
+
+```bash
+git submodule add https://github.com/erdalpekel/panda_simulation.git src/panda_simulation
+```
+
+If you just clone, git will make you a folder, but in submodule if you tell it the name of non existent folder it will clone everything to it. Like panda_simulation shouldn't be there in src, so everything will be cloned to src/panda_simulation. It won't make new folder and save it to src/panda_simulation/panda_simulation. Good point to know!
+
+Now if you want to add a submodule with a specific branch, what would you do?
+
+You need to see this stackoverflow link for better answer: https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule
+
 That's all folks. Please enjoy your time!
