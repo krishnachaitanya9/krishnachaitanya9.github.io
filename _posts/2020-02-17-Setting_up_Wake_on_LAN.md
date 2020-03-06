@@ -28,13 +28,19 @@ Well everything is good till turning on the PC, but in Ubuntu 18.04 LTS where th
 AutomaticLoginEnable = true
 AutomaticLogin = user1
 
+
+```
+
+If you want the user to login automatically uncomment the above lines. user1 should be replaced with your username appropriately.
+
+```text
 # Enabling timed login
 TimedLoginEnable = true
 TimedLogin = user1
 TimedLoginDelay = 10
 ```
 
-Don't forget to uncomment the lines after **Enabling timed login** else you can't login automatically.
+But if you are in a lab setting like me, and you want to login only after 10 seconds, then uncomment the above lines only. This will make the PC login after 10 seconds. Important note: At this point lines starting with  AutomaticLogin should be commented out, the ones I mentioned for automatic login without delay.
 
 Now if you have kept the Team Viewer on startup list, you can see your PC popping up in your Team Viewer accessible PC's list.
 
