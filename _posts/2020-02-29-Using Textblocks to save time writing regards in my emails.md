@@ -15,6 +15,7 @@ sudo apt install xsel
 Then from the Repo: https://github.com/GeorgeCiesinski/text-script install it and add text blocks about your regards saying
 
 ```bash
+
 Regards
 Kodur Krishna Chaitanya
 ```
