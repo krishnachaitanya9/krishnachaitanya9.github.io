@@ -47,7 +47,7 @@ And more better some changes have been merged to master through a PR. How do you
 git merge origin/master
 ```
 
-This will merge all master's commits into one commit and also let's you resolve any conflicts so that it's ready to merge into master.
+This will merge all master's commits into one commit and also let's you resolve any conflicts so that it's ready to merge into master. It's always better to do merge. Online you can see many blog posts about differences. Adding to them one other difference is that When I was doing rebase, lots of commits were coming up in the pull requests for merging a branch to master. But when I did merge there was only one clean commit which would be merging all changes from master. Hence use merge to get all changes from master.
 
 Now you have a directory, you want it deleted in remote after you added in gitignore. What should you do? Basically without deleting the original directory and committing the changes you delete git's copy and then commit changes. That's how . See the commands below:
 
