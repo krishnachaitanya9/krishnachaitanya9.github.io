@@ -53,3 +53,75 @@ Now I need to download TensorRT. To download it I went to this and downloaded Te
 
 To install TensorRT locally you need to follow the tutorial: https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html
 
+Next I have to make a conda environment. Let's do that first. CU has made an excellent tutorial on Github and I will be following that
+
+https://github.com/ResearchComputing/Anaconda_Tutorial_Fall_2019
+
+Next it will be useful to create conda environment at a particular location so that you don't run out of space. So the command I executed is:
+
+```bash
+source /curc/sw/anaconda3/latest # Activating conda base, so that shell recognizes conda commands
+conda create -p /projects/koch3328/software/py3.7_gpu python=3.7 # Creating conda environment
+conda activate /projects/koch3328/software/py3.7_gpu # Activating newly created environment
+```
+
+The install tensorflow GPU
+
+```bash
+module load gcc/6.1.0
+conda install -c anaconda tensorflow-gpu
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
