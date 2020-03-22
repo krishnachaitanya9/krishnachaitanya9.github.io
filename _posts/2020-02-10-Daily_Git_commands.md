@@ -44,16 +44,10 @@ git rebase origin/coworker
 And more better some changes have been merged to master through a PR. How do you get all changes from master?
 
 ```bash
-git rebase origin/master
+git merge origin/master
 ```
 
-I was just executing git rebase, even if it executes successfully it doesn't do shit. So be mindful of that. Very important.
-
-If there are merge conflicts, resolve them locally and then execute
-
-```bash
-git rebase --continue
-```
+This will merge all master's commits into one commit and also let's you resolve any conflicts so that it's ready to merge into master.
 
 Now you have a directory, you want it deleted in remote after you added in gitignore. What should you do? Basically without deleting the original directory and committing the changes you delete git's copy and then commit changes. That's how . See the commands below:
 
