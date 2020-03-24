@@ -1,13 +1,26 @@
 ---
-title: "Cacti and Eagle installation"
+title: "OpenDCIM Backup"
 date: 2020-02-23 00:26:00 +0800
 categories: [Eagle PCB]
 tags: [Eagle PCB]
 ---
 
-I copied everything from https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/how-to-install-cacti-on-ubuntu-18-04-lts-bionic-beaver.html
+Recently I had to take OpenDCIM backup. What I did was:
 
-Now the problems I faced:
+First take backup of dcim database. 
 
-- Just ignore the problems you are facing, the starting warning and click next
-- In the last dialog it will give you suggestions on how to escape those warnings. Follow them.
+```bash
+mysqldump -u dcim -p dcim > test.sql
+```
+
+Then Copy the folders drawings and pictures from original opendcim location.
+
+
+
+Next in the new location do:
+
+```bash
+mysql -u dcim -p dcim < test.sql 
+```
+
+From the test.sql obtained. Then copy the original drawings and pictures to new location and Voila!
