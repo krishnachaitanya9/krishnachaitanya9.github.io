@@ -68,17 +68,69 @@ conda activate /projects/koch3328/software/py3.7_gpu # Activating newly created 
 The install tensorflow GPU
 
 ```bash
-module load gcc/6.1.0
+module load gcc/8.2.0
 conda install -c anaconda tensorflow-gpu
 ```
 
+Now finally as we installed everything into custom folder, I made this small script to source all environment variables from:
 
+```bash
+#!/bin/bash
+export PATH=/curc/sw/cuda/10.1/bin:$PATH
+export PATH=$PATH:/projects/koch3328/software/TensorRT/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/curc/sw/cuda/10.1/lib64:/projects/koch3328/software/cudnn/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/projects/koch3328/software/TensorRT/lib
+export CUDA_HOME=/curc/sw/cuda/10.1
+export CUDA_INSTALL_DIR=$CUDA_HOME
+export CUDNN_INSTALL_DIR=/projects/koch3328/software/cudnn
+export CPATH=$CPATH:/curc/sw/cuda/10.1/include:/projects/koch3328/software/TensorRT/include:/projects/koch3328/software/cudnn/include
+export CFLAGS="-I$CUDA_HOME/include $CFLAGS"
+export LDFLAGS="$LDFLAGS -lm"
+#export CUDA_HOME=$CUDA_HOME:/projects/koch3328/software/cudnn:/projects/koch3328/software/TensorRT
 
+```
 
+Now when you run the slurm script use this template:
 
+```bash
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --time=23:59:00
+#SBATCH --qos=normal
+#SBATCH --partition=sgpu
+#SBATCH --ntasks=1
+#SBATCH --job-name=sgpu_ml_project
+#SBATCH --output=ml_final_project.%j.out
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=koch3328@colorado.edu
+module purge
+module load python/3.6.5
+module load gcc/8.2.0
+module load cuda/10.1
+source /curc/sw/anaconda3/2019.03/bin/activate
+source /home/koch3328/set_environment_variables.sh
+conda activate /projects/koch3328/software/py3.7_gpu
+python --version
+echo "training --"
+cd /scratch/summit/koch3328/deep_learning
+python test_tf_gpu.py
+echo "Finished"
 
+```
 
+Where test_tf_gpu.py contains the following code:
 
+```python
+import tensorflow as tf
+
+if __name__ == "__main__":
+    if tf.test.gpu_device_name():
+        print('Default GPU Device:{}'.format(tf.test.gpu_device_name()))
+    else:
+        print("Please install GPU version of TF")
+```
+
+Which printed out that infact I was using GPU. That's the way I setup running my GAN models in GPU.
 
 
 
