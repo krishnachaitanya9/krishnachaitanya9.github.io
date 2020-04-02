@@ -42,3 +42,15 @@ button.lid_init_state=open
 after splash.
 
 And Voila! Suspend Loop problem solved!
+
+
+
+Another problem you will face down the line is that when you suspend and then wake up, if you have an external monitor attached, you will only see screen visible in external monitor. To escape from that you have to execute below command in root:
+
+```bash
+sudo kernelstub -o "loglevel=0 splash systemd.show_status=false quiet mem_sleep_default=deep"
+```
+
+Source: https://github.com/pop-os/pop/issues/349
+
+Voila!
