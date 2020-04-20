@@ -3,10 +3,9 @@ title: "How to calibrate your accelerometer? Some tidbits"
 date: 2020-01-11 00:26:00 +0800  
 categories: [Accelerometer, Calibration]  
 tags: [Accelerometer, Calibration]  
-typora-root-url: /home/shivababa/PycharmProjects/krishnachaitanya9.github.io/
 ---
 
-I had to calibrate the accelerometer ADXL335 for the robot skin project that I am doing. It gives analog output in this digital world. Good for it! No problem. So I attached MPC3208 12bit ADC converter to read that output and consequently converting them to G's. Basically G means gravitational force of the mother earth which is 9.819 m/$$s^2$$
+I had to calibrate the accelerometer ADXL335 for the robot skin project that I am doing. It gives analog output in this digital world. Good for it! No problem. So I attached MPC3208 12bit ADC converter to read that output and consequently converting them to G's. Basically G means gravitational force of the mother earth which is 9.819 m/$s^2$
 
 Why I have chosen MP3208? Because it has python package. Install plug and play. Easy and simple. And choosing ADXL335 wasn't totally under my control, so here we are reading this blog post. Let's cross this Styx river together shall we?
 
