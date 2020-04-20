@@ -3,6 +3,7 @@ title: "How to calibrate your accelerometer? Some tidbits"
 date: 2020-01-11 00:26:00 +0800  
 categories: [Accelerometer, Calibration]  
 tags: [Accelerometer, Calibration]  
+typora-root-url: /home/shivababa/PycharmProjects/krishnachaitanya9.github.io
 ---
 
 I had to calibrate the accelerometer ADXL335 for the robot skin project that I am doing. It gives analog output in this digital world. Good for it! No problem. So I attached MPC3208 12bit ADC converter to read that output and consequently converting them to G's. Basically G means gravitational force of the mother earth which is 9.819 m/$$s^2$$
@@ -100,11 +101,12 @@ if __name__ == "__main__":
 ```
 
 The output is something like this:
-![Theoretical Vs Real](/assets/img/accel_calibration/real_vs_calculated.png)
+
+![alt](/assets/img/accel_calibration/real_vs_calculated.png)
 
 The circuit diagram is shown below:
 
-![Circuit Diagram](/assets/img/accel_calibration/circuit_diagram.png)
+![alt](/assets/img/accel_calibration/circuit_diagram.png)
 
 You can see that the theoretical line and measured values line, nearly do have less angle. So we can assume that "My Method" is accurate enough and is also easy to do.
 
