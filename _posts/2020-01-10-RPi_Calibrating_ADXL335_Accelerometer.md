@@ -3,7 +3,7 @@ title: "How to calibrate your accelerometer? Some tidbits"
 date: 2020-01-11 00:26:00 +0800  
 categories: [Accelerometer, Calibration]  
 tags: [Accelerometer, Calibration]  
-typora-root-url: /home/shivababa/PycharmProjects/krishnachaitanya9.github.io
+typora-root-url: /home/shivababa/PycharmProjects/krishnachaitanya9.github.io/
 ---
 
 I had to calibrate the accelerometer ADXL335 for the robot skin project that I am doing. It gives analog output in this digital world. Good for it! No problem. So I attached MPC3208 12bit ADC converter to read that output and consequently converting them to G's. Basically G means gravitational force of the mother earth which is 9.819 m/$$s^2$$
@@ -57,7 +57,7 @@ $$
 g = \frac{output\times10.23}{4096} - 5.2
 $$
 
-So why does it have to measure 2V instead of 2.2V? The answer lies in sensitivity. In the datasheet and also according to adafruit's forum, the sensitivity needs to in some range. And that range is 270 to 330 mV/g in Page 3 of the datasheet. So from the theoretical values if we calculate the sensitivity $$\frac{0-3.3}{-3 - (3)}$$ which is 550mV/g which doesn't fall into specified range mentioned in the datasheet. Also according to measured values using similar slope formula you would get 322.5mV/g. So what can we infer from these? That theoretical values are just theoretical and shit? Because the min-max sensitivity values according to datasheet aren't even in range. Maybe yeah. Everything ain't theoretical. Theoretical values are only to give you some direction. This also stresses on point why calibration is needed. You need to know exactly and model and understand the output of your accelerometer. Also another point to ponder, the datasheet is very professional, that's why they refrain from giving out info at 3.3V output it should be 3G acceleration. That's actually given in Sparkfun or adafruit's website. You can't say they are wrong, they are trying to give you a direction about possible limits, and they also give you a way to calibrate your sensor.
+So why does it have to measure 2V instead of 2.2V? The answer lies in sensitivity. In the datasheet and also according to adafruit's forum, the sensitivity needs to in some range. And that range is 270 to 330 mV/g in Page 3 of the datasheet. So from the theoretical values if we calculate the sensitivity $\frac{0-3.3}{-3 - (3)}$ which is 550mV/g which doesn't fall into specified range mentioned in the datasheet. Also according to measured values using similar slope formula you would get 322.5mV/g. So what can we infer from these? That theoretical values are just theoretical and shit? Because the min-max sensitivity values according to datasheet aren't even in range. Maybe yeah. Everything ain't theoretical. Theoretical values are only to give you some direction. This also stresses on point why calibration is needed. You need to know exactly and model and understand the output of your accelerometer. Also another point to ponder, the datasheet is very professional, that's why they refrain from giving out info at 3.3V output it should be 3G acceleration. That's actually given in Sparkfun or adafruit's website. You can't say they are wrong, they are trying to give you a direction about possible limits, and they also give you a way to calibrate your sensor.
 
 So now you use this equation on all axes (Honestly you have to do it for every axis, but I just did for one axis and called it a day) and then find out exact acceleration in g. And this time it will be smooth and calibrated and it will behave exactly how you want it to be.
 
@@ -102,11 +102,11 @@ if __name__ == "__main__":
 
 The output is something like this:
 
-![alt](/assets/img/accel_calibration/real_vs_calculated.png)
+![alt](assets/img/accel_calibration/real_vs_calculated.png)
 
 The circuit diagram is shown below:
 
-![alt](/assets/img/accel_calibration/circuit_diagram.png)
+![alt](assets/img/accel_calibration/circuit_diagram.png)
 
 You can see that the theoretical line and measured values line, nearly do have less angle. So we can assume that "My Method" is accurate enough and is also easy to do.
 
