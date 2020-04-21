@@ -1,5 +1,5 @@
 ---
-title: "Download GDrive files using wget"
+title: "How to make ROS print Debug statements"
 date: 2020-04-01 00:26:00 +0800
 categories: [ROS DEBUG]
 tags: [ROS DEBUG]
