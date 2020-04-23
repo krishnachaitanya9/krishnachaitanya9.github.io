@@ -5,7 +5,7 @@ categories: [ROS DEBUG]
 tags: [ROS DEBUG]
 ---
 
-Coming soon....
+So I started using this repo: https://github.com/shepnerd/inpainting_gmcnn
 
 
 
