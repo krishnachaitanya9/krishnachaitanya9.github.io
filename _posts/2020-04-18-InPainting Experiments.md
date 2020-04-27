@@ -5,7 +5,7 @@ categories: [ROS DEBUG]
 tags: [ROS DEBUG]
 ---
 
-So I started using this repo: https://github.com/tlatkowski/inpainting-gmcnn-keras. I made a sscript
+So I started using this repo: https://github.com/tlatkowski/inpainting-gmcnn-keras. Average PSNR value is very important in knowing the performance of the model.
 
 
 
