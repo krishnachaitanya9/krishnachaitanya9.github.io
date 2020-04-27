@@ -5,7 +5,7 @@ categories: [ROS DEBUG]
 tags: [ROS DEBUG]
 ---
 
-So I started using this repo: https://github.com/tlatkowski/inpainting-gmcnn-keras
+So I started using this repo: https://github.com/tlatkowski/inpainting-gmcnn-keras. I made a sscript
 
 
 
