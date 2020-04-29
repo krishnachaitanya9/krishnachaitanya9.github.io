@@ -67,4 +67,13 @@ Now if you want to add a submodule with a specific branch, what would you do?
 
 You need to see this stackoverflow link for better answer: https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule
 
+Next I was working on image inpainting. I wanted to push some version infos so that I know what I had to get back to. It's a good way to keep track of your versions
+
+```bash
+git tag -a v1.0.0
+git push origin v1.0.0
+```
+
+
+
 That's all folks. Please enjoy your time!
