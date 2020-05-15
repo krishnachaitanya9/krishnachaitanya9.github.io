@@ -1,7 +1,7 @@
 ---
 title: "Convolutional Neural Networks"
 date: 2020-05-14 00:26:00 +0800
-categories: [ROS DEBUG]
+categories: [Deep_Learning]
 tags: [Deep_Learning]
 ---
 In deep learning, anything related to images has convolution layer in them. So after you put an image into a convolution layer what would be the output width or height? The formula is
