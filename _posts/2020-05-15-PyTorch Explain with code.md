@@ -1,12 +1,12 @@
 ---
 title: "PyTorch Explain with code"
-date: 2020-05-14 00:26:00 +0800
+date: 2020-05-15 00:26:00 +0800
 categories: [Deep_Learning]
 tags: [Deep_Learning]
 ---
 In the below snippet we will learn basic tensor attributes using the code
 
-```python3
+```python
 import torch
 import numpy as np
 
