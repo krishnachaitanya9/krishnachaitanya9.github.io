@@ -1,123 +1,117 @@
 ---
-layout: default
-# The posts' layout
-# © 2017-2019 Cotes Chung
-# MIT Licensed
+layout: compress
 ---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-<div class="row">
-  {% include date-format.html %}
+{% include head.html %}
 
-  <div id="post-wrap" class="col-12 col-lg-11 col-xl-8">
-    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-      <h1 data-toc-skip>{{ page.title }}</h1>
-      <div class="post-meta text-muted d-flex flex-column">
-        <!-- Published Date and Categoreis -->
-        <div>
-          <span class="timeago" data-toggle="tooltip" title="{{ page.date | date: TOOLTIP_DATE }}">
-            {{ page.date | date: POST_DATE }}
-            <i class="hidden">{{ page.date | date_to_xmlschema }}</i>
-          </span>
-          {% if page.categories.size > 0 %}on{% endif %}
-          {% for category in page.categories %}
-            <a href='{{ site.baseurl }}/categories/{{ category | replace: ' ', '-' | downcase }}/'>{{ category }}</a>
-            {%- unless forloop.last -%}, {%- endunless -%}
+<body class="site">
+
+{% if site.google_tag_manager %}
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{% endif %}
+
+{% include header.html %}
+
+  {% if page.featured-img %}
+  <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/posts/{{ page.featured-img }}.jpg">
+  {% else %}
+  <div class="hero dark-bg">
+  {% endif %}
+    <div class="hero__wrap">
+      {% if post.categories or page.categories %}
+        <div class="hero__categories">
+          {% if post %}
+            {% assign categories = post.categories %}
+          {% else %}
+            {% assign categories = page.categories %}
+          {% endif %}
+          {% for category in categories %}
+            <a class="label" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
           {% endfor %}
         </div>
+      {% endif %}
+      <h1 class="hero__title">{{ page.title }}</h1>
+      <p class="hero__meta">
+        <span>
+          <time>{{ page.date | date_to_string }}</time>&nbsp;&middot;
+        </span>
+        <span>
+            {% assign words = content | number_of_words %}
+              {% if words < 360 %}
+                1 min
+              {% else %}
+                {{ words | divided_by:180 }} mins
+            {% endif %} read
+        </span>
+      </p>
+    </div>
+  </div>
 
-        <!-- lastmod -->
-        {% if page.seo.date_modified > page.date %}
-        <div>
-          Updated
-          <span class="timeago lastmod" data-toggle="tooltip" title="{{ page.seo.date_modified | date: TOOLTIP_DATE }}">
-            {{ page.seo.date_modified | date: POST_DATE }}
-            <i class="hidden">{{ page.seo.date_modified | date_to_xmlschema}}</i>
-          </span>
-        </div>
-        {% endif %}
+  <main class="site__content">
+    <div class="container">
+      <article class="post-content" itemprop="articleBody">
 
-        <!-- page views -->
-        {% if site.google_analytics.pv %}
-        <div>
-          <span id="pv" class="pageviews"><i class="fas fa-spinner fa-spin fa-fw"></i></span> views
-        </div>
-        {% endif %}
-
-      </div> <!-- .post-meta -->
-
-      {% capture post_content %}
-      <div class="post-content">
-        {% if page.image %}
-        <img src="{{ page.image }}" class="img-rounded">
-        {% endif %}
         {{ content }}
-      </div>
-      {% endcapture %}
 
-      <!-- Add lozad class into image tags. see: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-      {% if post_content contains '<img src=' %}
-        {{ post_content | replace: '<img src=', '<img class="lozad" data-src=' }}
-      {% else %}
-        {{ post_content }}
-      {% endif %}
+      </article>
+      <div class="post-content controls__inner">
+        <div class="controls__item prev">
+          {% if page.previous.url %}
 
-      <div class="post-tail text-muted">
-        <!-- Tags -->
-        {% if page.tags.size > 0 %}
-        <div class="mb-4">
-          {% for tag in page.tags %}
-          <a href="{{ site.baseurl }}/tags/{{ tag | replace: ' ', '-' | downcase }}/"
-            class="post-tag no-text-decoration" >
-            {{- tag -}}
+          <span>Previous</span>
+          <a href="{{page.previous.url | relative_url }}">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                    <path fill="fillColor" d="M5.647 1.718c.37-.434.323-1.09-.106-1.465A1.016 1.016 0 0 0 4.095.36L.25 4.875a1.05 1.05 0 0 0 .017 1.378l3.95 4.407c.38.424 1.03.456 1.448.07a1.05 1.05 0 0 0 .07-1.468l-3.34-3.725 3.253-3.819z"/>
+                  </svg>
+              </span>
+            {{page.previous.title | strip_html | truncate: 30}}
           </a>
-          {% endfor %}
-          </div>
-        {% endif %}
-      </div><!-- div.post-tail -->
+          {% endif %}
+        </div>
 
-    </div> <!-- .post -->
-  </div> <!-- #post-wrap -->
+        <div class="controls__item next">
+          {% if page.next.url %}
+          <span>Next</span>
+          <a href="{{page.next.url | relative_url }}">
+            {{page.next.title | strip_html | truncate: 30}}
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                  <path fill="#fillColor" d="M.353 9.282c-.37.434-.323 1.09.106 1.465a1.016 1.016 0 0 0 1.446-.107L5.75 6.125a1.05 1.05 0 0 0-.017-1.378L1.784.34A1.015 1.015 0 0 0 .336.27a1.05 1.05 0 0 0-.07 1.468l3.34 3.725L.353 9.282z"/>
+                </svg>
+              </span>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
 
-  {% include panel.html %}
+    {% if site.disqus.shortname %}
 
-</div> <!-- .row -->
+    <div class="comments">
+      <div class="container">
+        <div class="post-content">
 
-<div class="row">
-  <div id="post-extend-wrap" class="col-12 col-lg-11 col-xl-8">
+          {% include disqus.html %}
 
-    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-      {% include related-posts.html %}
+        </div>
+      </div>
+    </div>
 
-      <div class="post-pager d-flex justify-content-between">
-      {% if page.previous.url %}
-        <a href="{{ site.baseurl }}{{page.previous.url}}" class="btn btn-outline-primary">
-      {% else %}
-        <a href="javascript:;" class="btn btn-outline-primary disabled">
-      {% endif %}
-          <i class="fas fa-angle-left mr-1"></i>
-          OLDER POST
-        </a>
-
-      {% if page.next.url %}
-        <a href="{{ site.baseurl }}{{page.next.url}}" class="btn btn-outline-primary">
-      {% else %}
-        <a href="javascript:;" class="btn btn-outline-primary disabled">
-      {% endif %}
-        NEWER POST
-        <i class="fas fa-angle-right ml-1"></i>
-        </a>
-      </div> <!-- div.post-pager -->
-
-    {% if site.disqus.comments and page.comments %}
-      {% include disqus.html %}
     {% endif %}
-    <! –– Fb Comment Addition: from http://lkzhao.com/2016/10/25/facebook-comment-plugin-in-jekyll.html -->
-    <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}"></div>
 
-    </div> <!-- .pl-1 pr-1 -->
+  </main>
 
-  </div> <!-- wrap -->
+  {% include footer.html %}
+  {% include mathjax.html %}
+</body>
 
-</div> <!-- .row -->
-
-{% include lozad.html %}
+</html>

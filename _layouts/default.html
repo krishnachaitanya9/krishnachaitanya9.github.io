@@ -1,60 +1,47 @@
 ---
 layout: compress
-# Default layout
-# © 2017-2019 Cotes Chung
-# MIT Licensed
 ---
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
   {% include head.html %}
 
-  <body data-spy="scroll" data-target="#toc">
-    <div id="sidebar" class="d-flex flex-column">
-      {% include sidebar.html %}
-    </div>
-    <div id="main-wrap" class="bg-white">
-      {% include topbar.html %}
-      <div id="main">
+  <body class="site">
 
-        {% capture _content %}
-          {{ content }}
-        {% endcapture %}
+    {% if site.google_tag_manager %}
 
-        {% include fixlinenos.html %}
-        {{ _content }}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
 
-        {% include footer.html %}
-      </div>
-      {% include search-results.html %}
-    </div>
-
-    <div id="mask"></div>
-
-    <a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    {% if jekyll.environment == 'production' %}
-      {% include google-analytics.html %}
     {% endif %}
 
-    {% include search.html %}
-   <! –– Fb Comments. From: http://lkzhao.com/2016/10/25/facebook-comment-plugin-in-jekyll.html ––>
-   <div id="fb-root"></div>
-   <script>(function(d, s, id) {
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) return;
-   js = d.createElement(s); js.id = id;
-   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=587140342069037";
-   fjs.parentNode.insertBefore(js, fjs);
-   }(document, "script", "facebook-jssdk"));</script>
+    {% include header.html %}
 
-   <! –– MathJax For all webpages: https://github.com/mmistakes/minimal-mistakes/issues/735 ––>
-   <script type="text/javascript" async
-      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-   </script>
+    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ site.title | escape }}</h1>
+        <p class="hero__meta">{{ site.tagline }}</p>
+      </div>
+    </div>
+
+    <main class="site__content">
+      <section class="blog">
+        <div class="container">
+          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+
+            {% for post in site.posts %}
+              {% include card.html %}
+            {% endfor %}
+
+            <!-- {% include pagination.html %} -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {% include footer.html %}
 
   </body>
 

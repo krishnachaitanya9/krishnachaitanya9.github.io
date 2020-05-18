@@ -1,176 +1,71 @@
-# The Site Settings
-# © 2017-2019 Cotes Chung
-# MIT licensed
+# SITE CONFIGURATION
+title: Sleek # your site title
+author: GitHub User # You :P
+description: > # Meta description of Homepage
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/sleek" # the subpath of your site, e.g. /blog
+url: "https://janczizikow.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-#--------------------------
-
-title: Krishna Chaitanya's Blog
-
-description: 'My experiments with CS technologies in general. Mainly Python and C++'
-
-# Replace with your domain, e.g. 'https://username.github.io'
-url: 'krishnachaitanya9.github.io'
-
-author: Krishna Chaitanya                  # change to your full name
-
-avatar: /assets/img/sample/avatar.jpg   # Support network resources.
-
-github:
-  username: krishnachaitanya9             # change to your github username
-
-# twitter:
-#   username: twitter_username            # change to your twitter username
-
+# SEO PLUGIN
 social:
-  name: Kodur Krishna Chaitanya                  # it will shows as the copyright owner in Footer
-  email: chaitanyaradon89@gmail.com             # change to your email address
+  name: Your Name
   links:
-    # The first element serves as the copyright owner's link
-    # - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/krishnachaitanya9       # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/kodurkrishnachaitanya
+    - https://twitter.com/BenBalter
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/BenBalter
+    - https://plus.google.com/+BenBalter
+    - https://github.com/benbalter
+    - https://keybase.io/benbalter
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+# THEME SETTINGS
+navigation: # Navigation links
+  - {name: 'Home', link: '/'}
+  - {name: 'About', link: '/about'}
+  - {name: 'Contact', link: '/contact'}
 
-#--------------------------
+tagline: >
+  Modern Jekyll theme focused on speed performance &amp; SEO best practices
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
-google_analytics:
-  # Fill with your Google Analytics ID
-  id: 'UA-154886680-1'
-  # The Google Analytics pageviews switch.
-  # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-  pv: false
-  # superProxy baseURL and URL, only valid when `google_analytics.pv` is set to 'true'
-  proxy_baseurl: ''
-  proxy_url: ''
+email: your-email@domain.com # email for form submission
 
-# Moving away from Disqus. Hi Staticman!
+twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
+github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
+instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
+
 disqus:
-  shortname: ''   # Change to your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  comments: false        # boolean type, the global switch for posts comments.
+  shortname: janczizikow # to enable comments replace with your_disqus_shortname
 
+# google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
 
+service_worker: true
 
-# The year your website was first run.
-first_run: 2019
-
-# boolean type, global switch for ToC in posts.
-toc: true
-
-
-# if your site type is Project Pages site, change below value to '/projectname'
-baseurl: ''
-
-paginate: 10
-
+# BUILD SETTINGS
 markdown: kramdown
+highlighter: rouge # or pygments or null
+# theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
+exclude:
+  - README.md
+  - node_modules
+  - script
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - npm-debug.log
+  - gulpfile.js
+  - sleek.jpg
 
-highlighter: rouge
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-permalink: /posts/:title/
-
-defaults:
-  -
-    scope:
-      path: ""          # An empty string here means all files in the project
-      type: posts
-    values:
-      layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
-      location: Post
-      breadcrumb:
-        -
-          label: Posts
-          url: /
-  -
-    scope:
-      path: _drafts
-    values:
-      comments: false
-  -
-    scope:
-      path: tags
-    values:
-      location: Tag
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Tags
-          url: /tabs/tags/
-  -
-    scope:
-      path: categories
-    values:
-      location: Category
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Categories
-          url: /tabs/categories/
-  -
-    scope:
-      path: tabs
-    values:
-      layout: page
-      dynamic_title: true    # Hide title in mobile screens.
-      breadcrumb:
-        -
-          label: Home
-          url: /
-
-sass:
-  sass_dir: /assets/css
-  style: compressed
+include: ['_pages']
+permalink: /:title/
 
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: [html, head, body, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
-  profile: false
-  blanklines: false
-  ignore:
-    envs: []
 
-exclude:
-  - vendor/       # Avoid Jekyll mistakenly read the vender directory on Travis-CI's VM .
-  - Gemfile.lock
-  - Gemfile
-  - run.sh
-  - build.sh
-  - init.sh
-  - pv.sh
-
-sitemap_exclude:  # Sitemap will exclude the following items.
-  - /norobots/
-  - /assets/
-  - /tabs/
-  - /categories/
-  - /tags/
-  - /posts/
-  - /404.html
-  - /redirects.json
-  - /search.json
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
