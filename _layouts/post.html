@@ -7,9 +7,7 @@ layout: compress
 {% include head.html %}
 
 <body class="site">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
-<script src="{{ base.url | prepend: site.url }}/assets/js/clipboard.min.js"></script>
-<script src="{{ base.url | prepend: site.url }}/assets/js/copy.js"></script>  
+
 {% if site.google_tag_manager %}
 
 <!-- Google Tag Manager (noscript) -->
@@ -65,6 +63,9 @@ layout: compress
 
       </article>
       <div class="post-content controls__inner">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
+      <script src="{{ base.url | prepend: site.url }}/assets/js/clipboard.min.js"></script>
+      <script src="{{ base.url | prepend: site.url }}/assets/js/copy.js"></script>  
         <div class="controls__item prev">
           {% if page.previous.url %}
 
