@@ -2,6 +2,7 @@
 
 /* modification for button copy */
 .btn-copy {
+  display: none;
   color: #272822;
   background-color: #FFF;
   border-color: #272822;
@@ -19,6 +20,7 @@
 }
 
 .btn-copy:hover {
+  display: inline-block;
   cursor: pointer;
   background-color: #F2F2F2;
 }
