@@ -1,6 +1,7 @@
 ---
 title: "Trajectory Msg in Python"
 date: 2020-01-26 00:26:00 +0800
+featured-img: ros-logo
 categories: [ROS, Catkin]
 tags: [ROS, Catkin]
 ---

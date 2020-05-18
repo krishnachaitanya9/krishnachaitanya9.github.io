@@ -1,6 +1,7 @@
 ---
 title: "ROS publisher subscriber in C++"
 date: 2020-02-23 00:26:00 +0800
+featured-img: ros-logo
 categories: [ROS C++]
 tags: [ROS C++]
 ---
