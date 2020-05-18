@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "PyTorch Explained with code"
 date: 2020-05-15 00:26:00 +0800
 categories: [Deep_Learning]
@@ -10,11 +9,6 @@ In the below snippet we will learn basic tensor attributes using the code
 ```python
 import torch
 import numpy as np
-
-def test_func(test: str) -> str:
-    return f"{test}yo"
-
-
 
 if __name__ == "__main__":
     # Ways to make an empty tensor
