@@ -7,7 +7,8 @@ layout: compress
 {% include head.html %}
 
 <body class="site">
-  
+<script src="{{ base.url | prepend: site.url }}/assets/js/clipboard.min.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/copy.js"></script>  
 {% if site.google_tag_manager %}
 
 <!-- Google Tag Manager (noscript) -->
@@ -58,8 +59,7 @@ layout: compress
   <main class="site__content">
     <div class="container">
       <article class="post-content" itemprop="articleBody">
-        <script src="{{ base.url | prepend: site.url }}/assets/js/clipboard.min.js"></script>
-        <script src="{{ base.url | prepend: site.url }}/assets/js/copy.js"></script>
+    
         {{ content }}
 
       </article>
