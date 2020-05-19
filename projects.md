@@ -5,5 +5,5 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: projects
-title: Sleek Jekyll Theme
+title: My Projects
 ---
