@@ -1,6 +1,7 @@
 ---
 title: "Getting I2C working in Raspberry Pi 3B Ubuntu Mate"
 date: 2020-01-15 00:26:00 +0800
+featured-img: raspberry-pi-logo
 categories: [RPi, I2C]
 tags: [RPi, I2C]
 ---
