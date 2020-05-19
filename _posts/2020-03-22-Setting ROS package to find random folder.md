@@ -1,6 +1,7 @@
 ---
 title: "Making ROSPkg find your package without installing it through catkin build"
 date: 2020-03-22 00:26:00 +0800
+featured-img: ros-logo
 categories: [ROS]
 tags: [ROS]
 ---
