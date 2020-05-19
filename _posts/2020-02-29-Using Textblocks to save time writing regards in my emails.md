@@ -1,6 +1,7 @@
 ---
 title: "Using Textblocks to save time writing regards in my emails"
 date: 2020-02-29 00:26:00 +0800
+featured-img: python-logo
 categories: [Automation]
 tags: [Automation]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "PyTorch Explained with code"
 date: 2020-05-15 00:26:00 +0800
+featured-img: pytorch-logo
 categories: [Deep_Learning]
 tags: [Deep_Learning]
 ---

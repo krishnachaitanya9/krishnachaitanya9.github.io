@@ -1,6 +1,7 @@
 ---
 title: "Take RPi image backup and also load it in your filesystem to check it's contents"
 date: 2020-01-08 00:26:00 +0800
+featured-img: raspberry-pi-logo
 categories: [RPi]
 tags: [RPi]
 ---

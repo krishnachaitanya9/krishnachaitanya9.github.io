@@ -1,6 +1,7 @@
 ---
 title: "Python Decorators"
 date: 2019-12-20 00:26:00 +0800
+featured-img: python-logo
 categories: [Python3, OOPs]
 tags: [Python3]
 ---

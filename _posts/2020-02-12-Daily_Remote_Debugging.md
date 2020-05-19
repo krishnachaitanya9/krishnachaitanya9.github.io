@@ -1,6 +1,7 @@
 ---
 title: "Remote Debugging"
 date: 2019-02-12 00:26:00 +0800
+featured-img: debug-logo
 categories: [Debugger]
 tags: [Debugger]
 ---

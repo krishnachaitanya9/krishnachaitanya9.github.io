@@ -1,6 +1,7 @@
 ---
 title: "Make Password Protected Zip in Ubuntu"
 date: 2020-03-18 00:26:00 +0800
+featured-img: ubuntu-logo
 categories: [Zip Password]
 tags: [Zip Password]
 ---

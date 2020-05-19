@@ -1,6 +1,7 @@
 ---
 title: "How to calibrate your accelerometer? Some tidbits"  
 date: 2020-01-11 00:26:00 +0800  
+featured-img: raspberry-pi-logo
 categories: [Accelerometer, Calibration]  
 tags: [Accelerometer, Calibration]  
 ---

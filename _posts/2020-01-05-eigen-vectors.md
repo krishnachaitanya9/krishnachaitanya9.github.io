@@ -1,6 +1,7 @@
 ---
 title: "Eigen Vectors"
 date: 2020-01-05 00:26:00 +0800
+featured-img: math-logo
 categories: [Eigen Vectors]
 tags: [Eigen]
 ---

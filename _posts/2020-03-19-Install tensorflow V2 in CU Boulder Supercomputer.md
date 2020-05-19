@@ -1,6 +1,7 @@
 ---
 title: "Install TensorFlow V2 in Supercomputer"
 date: 2020-03-19 00:26:00 +0800
+featured-img: tf2-logo
 categories: [tensorflow]
 tags: [tensorflow]
 ---

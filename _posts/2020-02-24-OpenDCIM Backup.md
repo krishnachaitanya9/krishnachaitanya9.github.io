@@ -1,8 +1,9 @@
 ---
 title: "OpenDCIM Backup"
 date: 2020-02-23 00:26:00 +0800
-categories: [Eagle PCB]
-tags: [Eagle PCB]
+featured-img: datacenter-logo
+categories: [OpenDCIM]
+tags: [OpenDCIM]
 ---
 
 Recently I had to take OpenDCIM backup. What I did was:

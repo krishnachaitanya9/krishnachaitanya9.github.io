@@ -1,6 +1,7 @@
 ---
 title: "Save Tensorflow V2 Models"
 date: 2020-03-18 00:26:00 +0800
+featured-img: tf2-logo
 categories: [Zip Password]
 tags: [Zip Password]
 ---

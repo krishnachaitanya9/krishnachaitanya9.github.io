@@ -1,6 +1,7 @@
 ---
 title: "Bash -z silly mistake"
 date: 2020-01-05 00:26:00 +0800
+featured-img: bash-logo
 categories: [Bash]
 tags: [Bash]
 ---

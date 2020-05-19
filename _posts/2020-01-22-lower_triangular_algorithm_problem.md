@@ -1,6 +1,7 @@
 ---
 title: "Getting my custom algorithm to work"
 date: 2020-01-15 00:26:00 +0800
+featured-img: python-logo
 categories: [Math]
 tags: [Math]
 ---

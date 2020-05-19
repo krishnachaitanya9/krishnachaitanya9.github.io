@@ -1,6 +1,7 @@
 ---
 title: "Pop! OS Suspend Loop Solution"
 date: 2019-12-26 00:26:00 +0800
+featured-img: Pop_OS-logo
 categories: [Pop! OS, Systemd Boot]
 tags: [Systemd_Boot, Pop!_OS]
 ---

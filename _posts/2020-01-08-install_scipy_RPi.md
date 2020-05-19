@@ -1,6 +1,7 @@
 ---
 title: "Install Package using Python Wheels"
 date: 2020-01-08 00:26:00 +0800
+featured-img: raspberry-pi-logo
 categories: [RPi, Wheels]
 tags: [RPi, Wheels]
 ---

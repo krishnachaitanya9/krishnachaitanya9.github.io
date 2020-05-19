@@ -1,6 +1,7 @@
 ---
 title: "Setting Wake on LAN in Pop! OS"
 date: 2020-02-17 00:26:00 +0800
+featured-img: Pop_OS-logo
 categories: [Pop!_OS]
 tags: [Pop!_OS]
 ---

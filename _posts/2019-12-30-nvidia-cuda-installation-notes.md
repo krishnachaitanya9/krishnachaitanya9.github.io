@@ -1,6 +1,7 @@
 ---
 title: "Cuda Installation Without Installing the Driver"
 date: 2019-12-30 00:26:00 +0800
+featured-img: nvidia-cuda
 categories: [Nvidia, Cuda]
 tags: [Cuda]
 ---

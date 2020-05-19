@@ -1,6 +1,7 @@
 ---
 title: "My favourite Jetbrains Theme for coding"
 date: 2019-12-27 00:26:00 +0800
+featured-img: python-logo
 categories: [Themes]
 tags: [Themes]
 ---
