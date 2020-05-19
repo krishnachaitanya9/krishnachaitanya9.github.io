@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Introduction to catkin Workspace and ROS modules"
 date: 2020-01-25 00:26:00 +0800
 featured-img: ros-logo
