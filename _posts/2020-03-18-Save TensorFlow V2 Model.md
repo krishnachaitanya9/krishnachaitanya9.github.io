@@ -2,8 +2,8 @@
 title: "Save Tensorflow V2 Models"
 date: 2020-03-18 00:26:00 +0800
 featured-img: tf2-logo
-categories: [Zip Password]
-tags: [Zip Password]
+categories: [tensorflow]
+tags: [tensorflow]
 ---
 
 I have got a simple wish. I just need to save TensorFlow models so that I can restart the training after my Super Computer quota time gets over. Is it too much to ask for? Well It's not. Let's dive in.
