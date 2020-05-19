@@ -43,7 +43,6 @@ highlighter: rouge # or pygments or null
 collections:
   projects:
     output: true
-    permalink: /projects/:path/
 # theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
 exclude:
   - README.md
