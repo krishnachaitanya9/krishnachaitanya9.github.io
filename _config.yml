@@ -37,13 +37,14 @@ google_tag_manager: GTM-PCKSTVC # Uncomment to enable GTM. Replace GTM-XXXXXXX w
 
 service_worker: true
 
-# BUILD SETTINGS
-markdown: kramdown
-highlighter: rouge # or pygments or null
 collections:
   projects:
     output: true
     permalink: /projects/:path/
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge # or pygments or null
+
 # theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
 exclude:
   - README.md
