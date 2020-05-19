@@ -17,7 +17,7 @@ navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'About', link: '/about'}
   - {name: 'Projects', link: '/projects'}
-  - {name: 'Contact', link: '/categories'}
+  - {name: 'Contact', link: '/contact'}
 
 tagline: >
   Kodur Krishna Chaitanya's Blog
@@ -37,10 +37,6 @@ google_tag_manager: GTM-PCKSTVC # Uncomment to enable GTM. Replace GTM-XXXXXXX w
 
 service_worker: true
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge # or pygments or null
