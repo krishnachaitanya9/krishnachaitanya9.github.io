@@ -40,7 +40,6 @@ service_worker: true
 collections:
   projects:
     output: true
-    permalink: /projects/:path/
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge # or pygments or null
