@@ -6,5 +6,5 @@ featured-img: CNN-logo
 categories: [DeepLearning]
 tags: [DeepLearning]
 ---
-{% pdf https://krishnachaitanya9.github.io/pdf/Deep_Learning_Project.pdf %}
+{% pdf "https://krishnachaitanya9.github.io/pdf/Deep_Learning_Project.pdf" %}
 
