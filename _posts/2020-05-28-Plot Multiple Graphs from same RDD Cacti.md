@@ -1,6 +1,6 @@
 ---
-title: "PyTorch Explained with code"
-date: 2020-05-15 00:26:00 +0800
+title: "Plot Multiple Graphs from same RDD in Cacti"
+date: 2020-05-28 00:26:00 +0800
 featured-img: cacti-logo
 categories: [Cacti]
 tags: [Cacti]
