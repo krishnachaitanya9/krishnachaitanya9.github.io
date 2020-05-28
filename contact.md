@@ -8,6 +8,6 @@ Hello! My name is Kodur Krishna Chaitanya and I am a 2nd year Master's student i
 
 You can contact me at [kodur.chaitanya@colorado.edu](mailto:kodur.chaitanya@colorado.edu)
 
-Here is my CV [Long Version for academia]()
+Here is my CV [Long Version for Academia]()
 
 Here is my CV [Short Version for Jobs]()
