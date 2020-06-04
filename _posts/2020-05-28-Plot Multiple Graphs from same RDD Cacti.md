@@ -10,4 +10,4 @@ So for one of my projects where I had to continuously log in data from a data so
 - Go to Management-> Data Sources. Fix one data source ID. In my case I choose 122 as it was least, meaning it has most data than any rrd
 - In the above-selected data source ID, find what's the rrd file and note down the name. In my case it was xx.rrd. I will be calling it reference data source ID.
 - Next, go to other new data sources and then change the rrd file with fixed data source's rrd file which in our case would be xx.rrd
-- Disable the new data source so that it won't make multiple requests to the server as the reference data source ID is already doing the job of requesting the data. If the new data sources aren't disabled then they individually make multiple new requests
+- Disable the new data source so that it won't make multiple requests to the server as the reference data source ID is already doing the job of requesting the data. If the new data sources aren't disabled then they individually make multiple new requests.
