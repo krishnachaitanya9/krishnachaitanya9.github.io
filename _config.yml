@@ -4,7 +4,7 @@ author: Kodur Krishna Chaitanya # You :P
 description: > # Meta description of Homepage
   Here I write about my experiments with Python, C++ and miscellanious interesting things
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://krishnachaitanya9.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://krishnachaitanya7.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 social:
