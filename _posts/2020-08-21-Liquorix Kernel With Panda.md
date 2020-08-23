@@ -51,6 +51,23 @@ CONFIG_PREEMPT=y
 CONFIG_PREEMPT_RT_BASE=y
 CONFIG_PREEMPT_RT_FULL=y
 ```
-We don't have CONFIG_PREEMPT_RT_BASE or CONFIG_PREEMPT_RT_FULL set to y. So MAYBE we can assume that it's compiled in Option-3. 
+We don't have CONFIG_PREEMPT_RT_BASE or CONFIG_PREEMPT_RT_FULL set to y. So MAYBE we can assume that it's compiled in Option-3. How do I know? Test it something like this:
+
+Take any kernel, any version for that matter, download the exact version RT patch, then patch the kernel with RT patch, then go into the kernel source code and type the following
+```bash
+make nconfig
+```
+Navigate to the PREEMPT settings (It would be in General Setup -> Preemption Model -> Fully Preemptible Kernel as suggested previously in this post) then if you select Preemptible Kernel (Basic RT) then settings would be something like
+```
+CONFIG_PREEMPT_RT_BASE=y
+# Not set CONFIG_PREEMPT_RT_FULL
+```
+If you select Fully Preemptible Kernel (RT) then the settings would look something like this:
+```
+CONFIG_PREEMPT=y
+CONFIG_PREEMPT_RT_BASE=y
+CONFIG_PREEMPT_RT_FULL=y
+```
+That's why by default the liquorix kernel is compiled with Option-3 {Preemptible Kernel (Low-Latency Desktop) (PREEMPT__LL)}.
 
 Now I have to test whether this will work with Panda or not. That's the next step. Thanks!
