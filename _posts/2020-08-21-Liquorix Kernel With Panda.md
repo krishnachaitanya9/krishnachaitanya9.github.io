@@ -1,7 +1,7 @@
 ---
 title: "Liquorix Kernel With Panda"
 date: 2020-08-21 00:26:00 +0800
-featured-img: panda-logo
+featured-img: franka_panda
 categories: [Panda]
 tags: [Panda]
 ---
@@ -18,13 +18,39 @@ Preemption Model
     4. Preemptible Kernel (Basic RT) (PREEMPT_RTB) (NEW)
     > 5. Fully Preemptible Kernel (RT) (PREEMPT_RT_FULL) (NEW)
 
-Panda documentation prefers the kernel to run in option-5. By default the normal kernels run in option-2 or option-1. The liquorix kernel runs in option-4 [Ref (search for Hard Kernel Preemption)](https://liquorix.net/). Now let me rephrase the question asked by the OP nero_valerius. I have a kernel compiled with Option-4 (Liquorix Kernel). Can I run Panda without explicitly building it with Option-5? The answer is Yes. How to do it is explained in Link1.
+Panda documentation prefers the kernel to run in option-5. By default the normal kernels run in option-2 or option-1. The liquorix kernel runs in option-3 [Ref (search for Hard Kernel Preemption)](https://liquorix.net/). Now let me rephrase the question asked by the OP nero_valerius. I have a kernel compiled with Option-4 (Liquorix Kernel). Can I run Panda without explicitly building it with Option-5? The answer is Yes. How to do it is explained in Link1.
 
-The next question that can pop into mind: Can I use Liquorix Kernel, patch it with RT patch as suggested in Panda documentation and then build my own Liquorix with RT patch? Well I tried for 2 days and couldn't. There is always an error. One more logical thing to think is that the Liquorix Kernel developers might have developed the fully RT kernel if there was an option but I think there wasn't. So that's why they didn't develop full RT kernel. Else they would. I have tried it for my own sake and I have accepted it that I couldn't. Better people have tried :). 
+The next question that can pop into mind: Can I use Liquorix Kernel, patch it with RT patch as suggested in Panda documentation and then build my own Liquorix with RT patch? Well I tried for 2 days and couldn't. There is always an error. One more logical thing to think is that the Liquorix Kernel developers might have developed the fully RT kernel if there was an option but I think there wasn't. So that's why they didn't develop full RT kernel. Else they would. I have tried it for my own sake and I have accepted it that I couldn't. Better people have tried :) 
 
 In the future there is a possibility that RT kernel might be available as is and merged to main master kernel code, but we have to wait till that time. I will count for those days.
 
 The next question is if I have Liquorix Kernel then can the Nvidia Driver be installed and does it work? Well I have and RTX GPU and below is my screenshot that it works.
 ![Kernel_Screenshot](/assets/img/liquorix_kernel/kernel_screenshot.png)
+
+Next we have a compiled kernel. How do we know which option in above 5 options is it set? We can get answer from 2 commands. First:
+```bash
+py-2.7.17 pop-os in ~
+○ → uname -v
+#1 ZEN SMP PREEMPT liquorix 5.7-21ubuntu1~bionic (2020-08-19)
+```
+Now the RT kernel shows up as SMP PREMPT RT. The above command is just showing that it is SMP PREMPT. To dig more we move into the next command:
+```bash
+atom /boot/config-$(uname -r)
+```
+In the text editor you will find below lines:
+```
+# CONFIG_PREEMPT_NONE is not set
+# CONFIG_PREEMPT_VOLUNTARY is not set
+CONFIG_PREEMPT=y
+CONFIG_PREEMPT_COUNT=y
+CONFIG_PREEMPTION=y
+```
+According to this [link](https://rt.wiki.kernel.org/index.php/Frequently_Asked_Questions#How_does_the_CONFIG_PREEMPT_RT_patch_work.3F) you should have below lines if it's an RT kernel:
+```
+CONFIG_PREEMPT=y
+CONFIG_PREEMPT_RT_BASE=y
+CONFIG_PREEMPT_RT_FULL=y
+```
+We don't have CONFIG_PREEMPT_RT_BASE or CONFIG_PREEMPT_RT_FULL set to y. So MAYBE we can assume that it's compiled in Option-3. 
 
 Now I have to test whether this will work with Panda or not. That's the next step. Thanks!
