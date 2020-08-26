@@ -70,4 +70,18 @@ CONFIG_PREEMPT_RT_FULL=y
 ```
 That's why by default the liquorix kernel is compiled with Option-3 {Preemptible Kernel (Low-Latency Desktop) (PREEMPT__LL)}.
 
-Now I have to test whether this will work with Panda or not. That's the next step. Thanks!
+Now LibFranka by default uses RT kernel. We want to use Liquorix kernel for the reasons that we want cuda. How to tell libfranka to run in non-RT kernel like Liquorix?
+
+In Link1 the guy named Florian gives a big hint but it's not too obvious to understand. So I will write what I understood and hope that makes sense to all of us. In Link1 he says and I quote "You can run libfranka on a non-PREEMPT_RT Linux kernel by passing franka::RealtimeConfig::kIgnore to franka::Robot::Robot". So what's the franka::Robot::Robot? It's the franka robot class you initialize in your controller. Now if you didn't write the controller and don't wish to go into those intricacies, then you would want to change somewhere else. That's where I went and changed the libfranka source code at this [line](https://github.com/frankaemika/libfranka/blob/master/include/franka/robot.h#L66) which is 
+
+```cpp
+RealtimeConfig realtime_config = RealtimeConfig::kEnforce,
+```
+
+to 
+
+```cpp
+RealtimeConfig realtime_config = RealtimeConfig::kIgnore,
+```
+
+and then compile the libfranka and do the catkin build again. Voila! Now you can control the Franka Panda with a PC with a non-RT kernel. Thanks!
