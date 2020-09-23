@@ -1,0 +1,3 @@
+[submodule "arXiv-Daily-Mailer"]
+	path = arXiv-Daily-Mailer
+	url = git@github.com:krishnachaitanya7/arXiv-Daily-Mailer.git
