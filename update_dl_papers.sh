@@ -16,7 +16,7 @@ categories: [Deep_Learning]
 tags: [Deep_Learning]
 ---
 " > "$DL_PAPERS_MD"
-$ANACONDA_PATH $ARXIV_PATH --print True >> "DL_PAPERS_MD"
+$ANACONDA_PATH $ARXIV_PATH --print True >> "$DL_PAPERS_MD"
 git add .
 git commit -m "Update DL Papers"
 git push -u origin master
