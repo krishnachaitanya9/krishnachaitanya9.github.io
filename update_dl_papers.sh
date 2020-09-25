@@ -14,7 +14,7 @@ date: $NOW +0800
 featured-img: pytorch-logo
 categories: [Deep_Learning]
 tags: [Deep_Learning]
-mathjax: true
+mathjax: Yes
 ---
 " > "$DL_PAPERS_MD"
 $ANACONDA_PATH $ARXIV_PATH --print True >> "$DL_PAPERS_MD"
