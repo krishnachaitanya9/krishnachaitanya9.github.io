@@ -15,9 +15,6 @@ featured-img: pytorch-logo
 categories: [Deep_Learning]
 tags: [Deep_Learning]
 ---
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 " > "$DL_PAPERS_MD"
 $ANACONDA_PATH $ARXIV_PATH --print True >> "$DL_PAPERS_MD"
 git add .
