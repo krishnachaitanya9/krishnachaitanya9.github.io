@@ -1,7 +1,7 @@
 #!/bin/bash
 # Start Hardcoding Variables
 ARXIV_PATH="$HOME/PycharmProjects/arXiv-Daily-Mailer/arxiv_mailer.py"
-BLOG_PATH="$HOME/PycharmProjects/krishnachaitanya7.github.io/"
+BLOG_PATH="$HOME/PycharmProjects/krishnachaitanya7.github.io"
 ANACONDA_PATH="$HOME/anaconda3/envs/py3.7/bin/python"
 DL_PAPERS_MD="$BLOG_PATH/_posts/DL_Papers.md"
 NOW=$(date +"%Y-%m-%d %H:%M:%S")
