@@ -11,10 +11,10 @@ rm $DL_PAPERS_MD
 echo "---
 title: "Latest Deep Learning Papers"
 date: $NOW +0800
-mathjax: True
 featured-img: pytorch-logo
 categories: [Deep_Learning]
 tags: [Deep_Learning]
+mathjax: true
 ---
 " > "$DL_PAPERS_MD"
 $ANACONDA_PATH $ARXIV_PATH --print True >> "$DL_PAPERS_MD"
