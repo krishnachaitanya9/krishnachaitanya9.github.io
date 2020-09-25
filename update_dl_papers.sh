@@ -7,6 +7,7 @@ DL_PAPERS_MD="$BLOG_PATH/_posts/DL_Papers.md"
 NOW=$(date +"%Y-%m-%d %H:%M:%S")
 # End hardcoding variables
 cd "$BLOG_PATH"
+rm $DL_PAPERS_MD
 echo "---
 title: "Latest Deep Learning Papers"
 date: $NOW +0800
