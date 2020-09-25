@@ -8,7 +8,7 @@ NOW=$(date +"%Y-%m-%d %H:%M:%S")
 # End hardcoding variables
 cd "$BLOG_PATH"
 echo "---
-title: "Liquorix Kernel With Panda"
+title: "Latest Deep Learning Papers"
 date: $NOW +0800
 featured-img: pytorch-logo
 categories: [Deep_Learning]
