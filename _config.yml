@@ -42,6 +42,8 @@ collections:
     output: true
 # BUILD SETTINGS
 markdown: kramdown
+kramdown:
+   math_engine: mathjax
 highlighter: rouge # or pygments or null
 
 # theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
