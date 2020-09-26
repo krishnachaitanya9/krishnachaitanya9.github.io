@@ -7,6 +7,8 @@ DL_PAPERS_MD="$BLOG_PATH/_posts/2020-09-25-DL_Papers.md"
 NOW=$(date +"%Y-%m-%d %H:%M:%S")
 # End hardcoding variables
 cd "$BLOG_PATH"
+# Pulling all the latest updates
+git pull
 rm $DL_PAPERS_MD
 echo "---
 title: "Latest Deep Learning Papers"
