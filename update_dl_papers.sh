@@ -13,7 +13,7 @@ rm $DL_PAPERS_MD
 echo "---
 title: "Latest Deep Learning Papers"
 date: $NOW +0800
-featured-img: pytorch-logo
+featured-img: DL-logo
 categories: [Deep_Learning]
 tags: [Deep_Learning]
 mathjax: Yes
