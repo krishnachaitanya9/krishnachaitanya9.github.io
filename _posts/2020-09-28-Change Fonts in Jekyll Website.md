@@ -9,13 +9,14 @@ You gotta change files:
 
 - _includes/head.html
 Change the Google API's URL for the family of font that you want. Usually head.html is the HTML included in all HTML files in jekyll. If you have different naming make sure to add the changes in that.
-```html
+```
 <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Courier Prime">
 ```
+
 - assets/css/main.css
 In the body tag, update the font family's first font with whatever font you wish to change. Remember it should be of the same family as the URL that you entered in the head.html. Your interested font should be in the first place:
-```css
+```
 font-family:"Courier Prime",-apple-system,BlinkMacSystemFont,"Courier Prime",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 ```
 
