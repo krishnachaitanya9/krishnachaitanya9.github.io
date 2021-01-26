@@ -1,7 +1,7 @@
 ---
-title: "Pulse Secure VPN connection in Raspberry PI or other ARM devices"
+title: "PyTorch Batch Samplers Example"
 date: 2020-09-28 00:26:00 +0800
-featured-img: DL-logo
+featured-img: pytorch-logo
 categories: [PyTorch]
 tags: [PyTorch]
 ---
