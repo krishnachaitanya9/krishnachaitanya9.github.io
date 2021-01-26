@@ -1,6 +1,6 @@
 ---
 title: "PyTorch Batch Samplers Example"
-date: 2020-09-28 00:26:00 +0800
+date: 2021-01-26 00:26:00 +0800
 featured-img: pytorch-logo
 categories: [PyTorch]
 tags: [PyTorch]
